@@ -1,0 +1,9 @@
+jdk:
+  - openjdk8
+before_install:
+  - sdk install gradle 8.10.2
+  - sdk use gradle 8.10.2
+install:
+  - gradle clean lib:build lib:publishToMavenLocal
+  - cp -r ./* /tmp
+  - cd /tmp && gradle clean lib:build lib:publishToMavenLocal

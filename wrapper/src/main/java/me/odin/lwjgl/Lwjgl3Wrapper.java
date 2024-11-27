@@ -81,6 +81,10 @@ public interface Lwjgl3Wrapper {
 
 	void nvgStrokeColor(long ctx, NanoVGColorWrapper color);
 
+	void nvgBoxGradient(long ctx, float x, float y, float w, float h, float r, float f, NanoVGColorWrapper icol, NanoVGColorWrapper ocol, NanoVGPaintWrapper __result);
+
+	void nvgRoundedRect(long ctx, float x, float y, float w, float h, float r);
+
 	NanoVGPaintWrapper createPaint();
 
 	NanoVGColorWrapper createColor();

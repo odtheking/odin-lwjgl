@@ -221,6 +221,16 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
 	}
 
 	@Override
+	public void nvgBoxGradient(long ctx, float x, float y, float w, float h, float r, float f, NanoVGColorWrapper icol, NanoVGColorWrapper ocol, NanoVGPaintWrapper __result) {
+		NanoVG.nvgBoxGradient(ctx, x, y, w, h, r, f, impl(icol).color, impl(icol).color, impl(__result).paint);
+	}
+
+	@Override
+	public void nvgRoundedRect(long ctx, float x, float y, float w, float h, float r) {
+		NanoVG.nvgRoundedRect(ctx, x, y, w, h, r);
+	}
+
+	@Override
 	public NanoVGPaintWrapper createPaint() {
 		return new NanoVGPaintWrapperImpl(NVGPaint.malloc());
 	}

@@ -222,7 +222,7 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
 
 	@Override
 	public void nvgBoxGradient(long ctx, float x, float y, float w, float h, float r, float f, NanoVGColorWrapper icol, NanoVGColorWrapper ocol, NanoVGPaintWrapper __result) {
-		NanoVG.nvgBoxGradient(ctx, x, y, w, h, r, f, impl(icol).color, impl(icol).color, impl(__result).paint);
+		NanoVG.nvgBoxGradient(ctx, x, y, w, h, r, f, impl(icol).color, impl(ocol).color, impl(__result).paint);
 	}
 
 	@Override

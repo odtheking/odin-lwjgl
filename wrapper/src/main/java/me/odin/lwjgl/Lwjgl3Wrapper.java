@@ -65,6 +65,8 @@ public interface Lwjgl3Wrapper {
 
 	void nvgFontFaceId(long ctx, int font);
 
+	void nvgFontBlur(long ctx, float blur);
+
 	float nvgText(long ctx, float x, float y, CharSequence string);
 
 	float nvgTextBounds(long ctx, float x, float y, CharSequence string, float[] bounds);

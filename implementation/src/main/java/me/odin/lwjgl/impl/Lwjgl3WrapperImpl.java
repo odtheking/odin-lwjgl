@@ -180,7 +180,7 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
 
 	@Override
 	public void nvgFontBlur(long ctx, float blur) {
-		NanoVG.nvgFontBlur(ctx, font);
+		NanoVG.nvgFontBlur(ctx, blur);
 	}
 
 	@Override

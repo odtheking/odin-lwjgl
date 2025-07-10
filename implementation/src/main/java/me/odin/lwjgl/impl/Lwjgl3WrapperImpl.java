@@ -235,6 +235,16 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
 		NanoVG.nvgRoundedRect(ctx, x, y, w, h, r);
 	}
 
+    @Override
+    public void nvgCircle(long ctx, float x, float y, float r) {
+        NanoVG.nvgCircle(ctx, x, y, r);
+    }
+
+    @Override
+    public void nvgArc(long ctx, float cx, float cy, float r, float a0, float a1, int dir) {
+        NanoVG.nvgArc(ctx, cx, cy, r, a0, a1, dir);
+    }
+
 	@Override
 	public NanoVGPaintWrapper createPaint() {
 		return new NanoVGPaintWrapperImpl(NVGPaint.malloc());

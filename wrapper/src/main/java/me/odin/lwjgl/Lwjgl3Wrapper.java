@@ -87,6 +87,10 @@ public interface Lwjgl3Wrapper {
 
 	void nvgRoundedRect(long ctx, float x, float y, float w, float h, float r);
 
+    void nvgCircle(long ctx, float cx, float cy, float r);
+
+    void nvgArc(long ctx, float cx, float cy, float r, float a0, float a1, int dir);
+
 	NanoVGPaintWrapper createPaint();
 
 	NanoVGColorWrapper createColor();

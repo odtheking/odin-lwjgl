@@ -91,6 +91,10 @@ public interface Lwjgl3Wrapper {
 
     void nvgArc(long ctx, float cx, float cy, float r, float a0, float a1, int dir);
 
+    void nvgTextLineHeight(long ctx, float lineHeight);
+
+    void nvgTextBox(long ctx, float x, float y, float breakRowWidth, CharSequence string);
+
 	NanoVGPaintWrapper createPaint();
 
 	NanoVGColorWrapper createColor();

@@ -245,6 +245,16 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
         NanoVG.nvgArc(ctx, cx, cy, r, a0, a1, dir);
     }
 
+    @Override
+    public void nvgTextLineHeight(long ctx, float lineHeight) {
+        NanoVG.nvgTextLineHeight(ctx, lineHeight);
+    }
+
+    @Override
+    public void nvgTextBox(long ctx, float x, float y, float breakRowWidth, CharSequence string) {
+        NanoVG.nvgTextBox(ctx, x, y, breakRowWidth, string);
+    }
+
 	@Override
 	public NanoVGPaintWrapper createPaint() {
 		return new NanoVGPaintWrapperImpl(NVGPaint.malloc());

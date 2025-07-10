@@ -89,11 +89,13 @@ public interface Lwjgl3Wrapper {
 
     void nvgCircle(long ctx, float cx, float cy, float r);
 
-    void nvgArc(long ctx, float cx, float cy, float r, float a0, float a1, int dir);
+    void nvgArcTo(long ctx, float x1, float y1, float x2, float y2, float radius);
 
     void nvgTextLineHeight(long ctx, float lineHeight);
 
     void nvgTextBox(long ctx, float x, float y, float breakRowWidth, CharSequence string);
+
+    void nvgTextBoxBounds(long ctx, float x, float y, float breakRowWidth, CharSequence string, float[] bounds);
 
 	NanoVGPaintWrapper createPaint();
 

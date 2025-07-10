@@ -241,8 +241,8 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
     }
 
     @Override
-    public void nvgArc(long ctx, float cx, float cy, float r, float a0, float a1, int dir) {
-        NanoVG.nvgArc(ctx, cx, cy, r, a0, a1, dir);
+    public void nvgArcTo(long ctx, float x1, float y1, float x2, float y2, float radius) {
+        NanoVG.nvgArcTo(ctx, x1, y1, x2, y2, radius);
     }
 
     @Override
@@ -253,6 +253,11 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
     @Override
     public void nvgTextBox(long ctx, float x, float y, float breakRowWidth, CharSequence string) {
         NanoVG.nvgTextBox(ctx, x, y, breakRowWidth, string);
+    }
+
+    @Override
+    public void nvgTextBoxBounds(long ctx, float x, float y, float breakRowWidth, CharSequence string, float[] bounds) {
+        NanoVG.nvgTextBoxBounds(ctx, x, y, breakRowWidth, string, bounds);
     }
 
 	@Override

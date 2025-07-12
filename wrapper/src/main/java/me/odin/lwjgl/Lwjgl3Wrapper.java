@@ -97,6 +97,8 @@ public interface Lwjgl3Wrapper {
 
     void nvgTextBoxBounds(long ctx, float x, float y, float breakRowWidth, CharSequence string, float[] bounds);
 
+    void nvglCreateImageFromHandle(long ctx, int textureId, int w, int h, int flags);
+
 	NanoVGPaintWrapper createPaint();
 
 	NanoVGColorWrapper createColor();

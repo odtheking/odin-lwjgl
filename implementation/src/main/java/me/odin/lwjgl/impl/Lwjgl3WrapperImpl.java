@@ -260,6 +260,11 @@ public class Lwjgl3WrapperImpl implements Lwjgl3Wrapper {
         NanoVG.nvgTextBoxBounds(ctx, x, y, breakRowWidth, string, bounds);
     }
 
+    @Override
+    public void nvglCreateImageFromHandle(long ctx, int textureId, int w, int h, int flags) {
+        NanoVGGL2.nvglCreateImageFromHandle(ctx, textureId, w, h, flags);
+    }
+
 	@Override
 	public NanoVGPaintWrapper createPaint() {
 		return new NanoVGPaintWrapperImpl(NVGPaint.malloc());

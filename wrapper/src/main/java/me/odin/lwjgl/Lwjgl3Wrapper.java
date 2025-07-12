@@ -97,7 +97,7 @@ public interface Lwjgl3Wrapper {
 
     void nvgTextBoxBounds(long ctx, float x, float y, float breakRowWidth, CharSequence string, float[] bounds);
 
-    void nvglCreateImageFromHandle(long ctx, int textureId, int w, int h, int flags);
+    int nvglCreateImageFromHandle(long ctx, int textureId, int w, int h, int flags);
 
 	NanoVGPaintWrapper createPaint();
 
@@ -107,6 +107,7 @@ public interface Lwjgl3Wrapper {
 	int NVG_STENCIL_STROKES = 2;
 	int NVG_DEBUG = 4;
 	int NVG_IMAGE_NODELETE = 65536;
+    int NVG_IMAGE_NEAREST = 1<<5;
 
 	int NVG_ALIGN_LEFT = 1;
 	int NVG_ALIGN_CENTER = 2;

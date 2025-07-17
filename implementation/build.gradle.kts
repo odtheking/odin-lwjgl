@@ -37,6 +37,9 @@ dependencies {
 	lwjglNative("org.lwjgl:lwjgl:3.3.1:natives-macos")
 	lwjglNative("org.lwjgl:lwjgl-stb:3.3.1:natives-macos")
 	lwjglNative("org.lwjgl:lwjgl-nanovg:3.3.1:natives-macos")
+	lwjglNative("org.lwjgl:lwjgl:3.3.1:natives-macos-arm64")
+	lwjglNative("org.lwjgl:lwjgl-stb:3.3.1:natives-macos-arm64")
+	lwjglNative("org.lwjgl:lwjgl-nanovg:3.3.1:natives-macos-arm64")
 }
 
 val odinJar = tasks.create<ShadowJar>("odinJar") {
